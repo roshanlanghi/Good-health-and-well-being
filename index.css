@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Header Styles */
@@ -32,9 +33,6 @@ header {
 
 .header-title {
     font-size: 2rem;
-    background-image: url('your-background-image.jpg'); /* Replace with actual image path */
-    background-size: cover;
-    background-position: center;
     color: white;
     padding: 15px 20px;
     border-radius: 8px;
@@ -78,21 +76,66 @@ nav ul li a:hover {
 }
 
 /* Banner Styles */
-#about .banner {
-    width: 100%;
-    height: auto;
-    display: block;
-    max-height: 400px; /* Ensures the banner does not overflow */
-    object-fit: cover;
+.hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #f7faff;
+    background-image: url('home.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 1.5rem;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(0, 36, 77, 0.8), rgba(0, 114, 255, 0.4));
+}
+
+.hero-content {
+    position: relative;
+    max-width: 720px;
+}
+
+.hero-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+    color: #e4efff;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #e8f1ff;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
 }
 
 /* Blog Section Styles */
 #blog {
     margin: 20px;
-    padding: 20px;
+    padding: 30px 20px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 #blog h2 {
@@ -106,10 +149,14 @@ nav ul li a:hover {
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
+    max-width: 600px;
 }
 
 #blog article {
     margin-bottom: 20px;
+    background-color: #fbfdff;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 #blog article h3 {
@@ -193,17 +240,29 @@ footer p {
   }
   
   /* Style for the buttons */
-  .special-button {
-    padding: 10px 20px;
-    font-size: 16px;
+.special-button {
+    padding: 12px 22px;
+    font-size: 1rem;
     cursor: pointer;
-    border: 2px solid #333;
-    border-radius: 5px;
-    background-color: #f4f4f4;
-    color: #333;
+    border: none;
+    border-radius: 999px;
+    background-color: #ffffff;
+    color: #0072ff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 15px rgba(0, 114, 255, 0.25);
+}
+
+.special-button.secondary {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: none;
   }
   
   .special-button:hover {
-    background-color: #ddd;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 114, 255, 0.3);
   }
   
