@@ -7,99 +7,6 @@
     <title>Health Tracker</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="services.css">
-    <style>
-        .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-        }
-        .special-button {
-            background-color: #0072ff; 
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background 0.3s;
-            text-decoration: none; /* Remove underline */
-            display: inline-block; /* Allow margin and padding */
-            margin-top: 10px; /* Space above the button */
-            margin-right: 10px;
-        }
-        .special-button:hover {
-            background-color: #0072ff; 
-        }.hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-        }
-        .special-button {
-            background-color: #0072ff; 
-            color: #f3f8ff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background 0.3s;
-            text-decoration: none; /* Remove underline */
-            display: inline-block; /* Allow margin and padding */
-            margin-top: 10px; /* Space above the button */
-            margin-right: 10px;
-        }
-        .special-button:hover {
-            background-color: #0072ff; 
-        }
-        /* Center the content of the blog section */
-        #blog {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Style for each article */
-        #blog article {
-            width: 80%; /* Adjust this to control the width of each article */
-            margin-bottom: 20px;
-            background-color: #fbfdff; /* Light background for each article */
-            padding: 20px;
-            border-radius: 8px; /* Optional: gives a rounded corner effect */
-        }
-
-        /* Make the images bigger and center them */
-        .blog-img {
-            width: 100%; /* Make images take up the full width of their container */
-            height: auto; /* Maintain the aspect ratio */
-            max-width: 600px; /* Optional: Max width for better control */
-            margin: 0 auto 15px auto; /* Centers the image and adds space below */
-        }
-
-        /* Adjust the header and links styles */
-        #blog h3, #blog h4 {
-            font-size: 1.5em;
-            color: #0072ff; /* Make the heading text blue */
-            margin-bottom: 10px;
-        }
-
-        /* Style the anchor tags inside articles */
-        #blog a {
-            color: #0072ff; /* Blue color for links */
-            text-decoration: none;
-        }
-
-        #blog a:hover {
-            text-decoration: underline; /* Underline on hover for better interaction */
-        }
-    </style>
 </head>
 
 <body>
@@ -133,12 +40,15 @@
     </header>
 
     <!-- Health Tracker Banner Section -->
-    <section id="about" style="background-image: url('home.jpg'); background-size: cover; background-position: center; text-align: center; padding: 15%; color: white;">
-        <div>
+    <section id="about" class="hero">
+        <div class="hero-content">
+            <p class="hero-eyebrow">Personalized wellness for every day</p>
             <h1>Welcome to Your Health Tracker</h1>
-            <p>Track your wellness and stay on top of your health</p>
-            <a href="services.html" class="special-button">Explore Services</a>
-            <a href="logout.php" class="special-button">Logout</a>
+            <p class="hero-subtitle">Track nutrition, sleep, routines, and stress relief in one calming place.</p>
+            <div class="hero-actions">
+                <a href="services.html" class="special-button">Explore Services</a>
+                <a href="logout.php" class="special-button secondary">Logout</a>
+            </div>
         </div>
     </section>
 
